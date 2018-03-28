@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Music Player</title>
+		<link href="./css/reset.css" type="text/css" rel="stylesheet">
+		<link href="./css/normalize.css" type="text/css" rel="stylesheet">
+		<link href="./style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="box song">
+				<div class="info">
+					<div class="previous track">
+						<h2 class="title">Previous Track</h2>
+						<h3 class="artist">Previous Artist</h3>
+						<h3 class="divider">—</h3>
+						<h3 class="album">Previous Album</h3>
+					</div>
+					<div class="current track">
+						<h2 class="title" id="something">Track Name</h2>
+						<h3 class="artist">Artist Name</h3>
+						<h3 class="divider">—</h3>
+						<h3 class="album">Album Name</h3>
+					</div>
+					<div class="next track">
+						<h2 class="title">Next Track</h2>
+						<h3 class="artist">Next Artist</h3>
+						<h3 class="divider">—</h3>
+						<h3 class="album">Next Album</h3>
+					</div>
+				</div>
+				<div class="controls">
+					<p class="current time" id="currentTime">NaN</p>
+					<button class="previous" onclick="previousSong()">◀️</button>
+					<button class="play-pause" onclick="playPause()">
+						<img src="./images/white-play-icon.svg" id="playIcon">
+						<img src="./images/white-pause-icon.svg" id="pauseIcon">
+					</button>
+					<button class="next" onclick="nextSong()">▶️</button>
+					<p class="remaining time" id="remainingTime">NaN</p>
+					<div class="seeker">
+						<input type="range" min="0" max="100" value="0" class="slider" id="songSeeker">
+					</div>
+				</div>
+				<audio class="player" id="musicPlayer">
+					<source src="./track.mp3" type="audio/mp3">
+				</audio>
+				<script src="./player-controller.js"></script>
+			</div>
+			<div class="box up-next">
+				<h2 class="title">Up Next</h2>
+				<ul>
+					<li>
+						<div class="track">
+							<p class="title">Track One</p>
+							<p class="divider">—</p>
+							<p class="artist">Artist Name</p>
+							<p class="divider">—</p>
+							<p class="album">Album Name</p>
+						</div>
+					</li>
+					<li>
+						<div class="track">
+							<p class="title">Track Two</p>
+							<p class="divider">—</p>
+							<p class="artist">Artist Name</p>
+							<p class="divider">—</p>
+							<p class="album">Album Name</p>
+						</div>
+					</li>
+					<li>
+						<div class="track">
+							<p class="title">Track Three</p>
+							<p class="divider">—</p>
+							<p class="artist">Artist Name</p>
+							<p class="divider">—</p>
+							<p class="album">Album Name</p>
+						</div>
+					</li>
+					<li>
+						<div class="track">
+							<p class="title">Track Four</p>
+							<p class="divider">—</p>
+							<p class="artist">Artist Name</p>
+							<p class="divider">—</p>
+							<p class="album">Album Name</p>
+						</div>
+					</li>
+					<li>
+						<div class="track">
+							<p class="title">Track Five</p>
+							<p class="divider">—</p>
+							<p class="artist">Artist Name</p>
+							<p class="divider">—</p>
+							<p class="album">Album Name</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
