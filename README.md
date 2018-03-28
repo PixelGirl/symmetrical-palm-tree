@@ -1,5 +1,4 @@
 # symmetrical-palm-tree
-
 ## Another music player
 
 This project came forth out of my own experimentation with web technologies. It contains many flaws and bugs that I'm still trying to work out.
